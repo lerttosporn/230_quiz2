@@ -34,6 +34,8 @@ int main()
         {
             k=j;
             i=2;
+
+            chk=0;
             while(k!=1)
             {
                 if(k%i==0)
@@ -43,18 +45,16 @@ int main()
                 }
                 else
                 {
-                chk=0;
+                    chk=0;
                     i++;
                 }
-                if(chk==3)
+            }
+            if(chk>=3&&chk%3==0)
                 {
                     tmp++;
-                    chk=0;
-                    break;
                 }
-            }
         }
-        printf("%d",m-tmp+1);
+        printf("%d ",m-tmp);
     }
     return 0;
 }
