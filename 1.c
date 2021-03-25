@@ -11,7 +11,7 @@ int main()
             if(n%i==0)
             {
                 n=n/i;
-                chk++;
+                ch++;
                 chk1++;
             }
             else
@@ -19,13 +19,13 @@ int main()
                 ch=0;
                 i++;
             }
-            if(ch>=3&&chk%3==0&&chk%3==0)
+            if(ch>=3&&ch%3==0&&chk1%3==0)
             {
                 break;
             }
         }
     }
-    if(ch>=3&&chk%3==0&&chk%3==0)
+    if(ch>=3&&ch%3==0&&chk1%3==0)
     {
         printf("Not Cube Free");
     }
