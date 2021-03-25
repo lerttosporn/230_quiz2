@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n,m,i=2,ch=0,j,tmp=0,chk=0,k,x;
+    int n,m,i=2,ch=0,j,tmp=0,chk=0,k,chk1=0;
     scanf("%d",&n);
     m=n;
     if(n!=1)
@@ -11,20 +11,21 @@ int main()
             if(n%i==0)
             {
                 n=n/i;
-                ch++;
+                chk++;
+                chk1++;
             }
             else
             {
                 ch=0;
                 i++;
             }
-            if(ch==3&&n==1)
+            if(ch>=3&&chk%3==0&&chk%3==0)
             {
                 break;
             }
         }
     }
-    if(ch>=3&&ch%3==0)
+    if(ch>=3&&chk%3==0&&chk%3==0)
     {
         printf("Not Cube Free");
     }
@@ -34,7 +35,7 @@ int main()
         {
             k=j;
             i=2;
-
+            chk1=0;
             chk=0;
             while(k!=1)
             {
@@ -42,6 +43,7 @@ int main()
                 {
                     k=k/i;
                     chk++;
+                    chk1++;
                 }
                 else
                 {
@@ -49,7 +51,7 @@ int main()
                     i++;
                 }
             }
-            if(chk>=3&&chk%3==0)
+            if(chk>=3&&chk%3==0&&chk1%3==0)
                 {
                     tmp++;
                 }
