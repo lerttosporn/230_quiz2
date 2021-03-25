@@ -24,7 +24,7 @@ int main()
             }
         }
     }
-    if(ch==3)
+    if(ch>=3&&ch%3==0)
     {
         printf("Not Cube Free");
     }
