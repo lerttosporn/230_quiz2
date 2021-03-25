@@ -18,7 +18,7 @@ int main()
                 ch=0;
                 i++;
             }
-            if(ch==3)
+            if(ch==3&&n==1)
             {
                 break;
             }
