@@ -1,0 +1,60 @@
+#include<stdio.h>
+int main()
+{
+    int n,m,i=2,ch=0,j,tmp=0,chk=0,k,x;
+    scanf("%d",&n);
+    m=n;
+    if(n!=1)
+    {
+        while(n!=1)
+        {
+            if(n%i==0)
+            {
+                n=n/i;
+                ch++;
+            }
+            else
+            {
+                ch=0;
+                i++;
+            }
+            if(ch==3)
+            {
+                break;
+            }
+        }
+    }
+    if(ch==3)
+    {
+        printf("Not Cube Free");
+    }
+    else
+    {
+        for(j=1; j<m; j++)
+        {
+            k=j;
+            i=2;
+            while(k!=1)
+            {
+                if(k%i==0)
+                {
+                    k=k/i;
+                    chk++;
+                }
+                else
+                {
+                chk=0;
+                    i++;
+                }
+                if(chk==3)
+                {
+                    tmp++;
+                    chk=0;
+                    break;
+                }
+            }
+        }
+        printf("%d",m-tmp+1);
+    }
+    return 0;
+}
