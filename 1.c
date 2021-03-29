@@ -19,13 +19,13 @@ int main()
                 ch=0;
                 i++;
             }
-            if(ch>=3&&ch%3==0&&chk1%3==0)
+            if(ch>=3&&ch%3==0&&chk1%3==0&&n==1)
             {
                 break;
             }
         }
     }
-    if(ch>=3&&ch%3==0&&chk1%3==0)
+    if(ch>=3&&ch%3==0&&chk1%3==0&&n==1)
     {
         printf("Not Cube Free");
     }
@@ -51,7 +51,7 @@ int main()
                     i++;
                 }
             }
-            if(chk>=3&&chk%3==0&&chk1%3==0)
+            if(chk>=3&&chk%3==0&&chk1%3==0&&n==1)
                 {
                     tmp++;
                 }
